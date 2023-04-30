@@ -1,15 +1,39 @@
 ---
+const getVideos = await Astro.glob("../../videos/*.json");
+import Main from "./Main.svelte";
+import Search from "./Search.svelte";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="https://jontes.page/images/avatar.min.webp"/>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>JonTube</title>
+  </head>
+  <body class="bg-stone-950">
+    <nav class="border-gray-200 bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://jontes.page" class="flex items-center">
+          <img
+            src="https://jontes.page/images/avatar.webp"
+            class="h-8 mr-3"
+            alt="Jonte Profile Picture"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+            >JonTube</span
+          >
+        </a>
+        <Search client:load/>
+      </div>
+    </nav>
+
+    <main class="flex m-8 gap-4 text-slate-200">
+      <Main client:load getVideos={getVideos} />
+    </main>
+  </body>
 </html>
