@@ -10,9 +10,6 @@ dependencies:
   astro:
     specifier: ^2.3.2
     version: 2.3.2
-  fuzzysearch:
-    specifier: ^1.0.3
-    version: 1.0.3
   svelte:
     specifier: ^3.54.0
     version: 3.58.0
@@ -1423,10 +1420,6 @@ packages:
 
   /function-bind@1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
-    dev: false
-
-  /fuzzysearch@1.0.3:
-    resolution: {integrity: sha512-s+kNWQuI3mo9OALw0HJ6YGmMbLqEufCh2nX/zzV5CrICQ/y4AwPxM+6TIiF9ItFCHXFCyM/BfCCmN57NTIJuPg==}
     dev: false
 
   /gensync@1.0.0-beta.2:
