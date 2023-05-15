@@ -3,7 +3,7 @@ name: Deploy frontend to Edgeserver.IO
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 jobs:
   dostuff:
