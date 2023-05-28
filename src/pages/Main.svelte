@@ -11,7 +11,6 @@
   import { writable } from "svelte/store";
   export let getVideos: Video[];
   const videos = writable<Video[]>(getVideos);
-  videos.set(getVideos);
 
   $: {
     const value = $query;
